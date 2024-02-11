@@ -8,12 +8,19 @@ public class Problema1 extends CommandLineProgram{
 
         int n = readInt();
 
-        if (isPerfect(n)){
+        if(n > 1) {
 
-            println("És perfecte.");
-        }else {
+            if (isPerfect(n)) {
 
-            println("No és perfecte.");
+                println("És perfecte.");
+            } else {
+
+                println("No és perfecte.");
+            }
+
+        }else{
+
+            println("El número és més petit que 1.");
         }
     }
 
