@@ -6,22 +6,8 @@ public class Problema1 extends CommandLineProgram{
 
     public void run(){
 
-        int n = readInt();
-
-        if(n > 1) {
-
-            if (isPerfect(n)) {
-
-                println("És perfecte.");
-            } else {
-
-                println("No és perfecte.");
-            }
-
-        }else{
-
-            println("El número és més petit que 1.");
-        }
+        test();
+        
     }
 
     public boolean isPerfect(int n){
@@ -38,5 +24,31 @@ public class Problema1 extends CommandLineProgram{
         }
 
         return(n == divisors);
+    }
+
+    public void test (){
+
+        int[] nums = new int[] {6,496, 8128, 37, 88, 123};
+
+        for(int i = 0; i < nums.length; i++){
+
+            if(isPerfect(nums[i])){
+
+                if(i<3){
+                    println("OK");
+                }else{
+                    println("NOT OK");
+                }
+            }else{
+
+                if(i<3){
+                    println("NOT OK");
+                }else{
+                    println("OK");
+                }
+            }
+        }
+
+
     }
 }
