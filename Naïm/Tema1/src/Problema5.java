@@ -23,9 +23,9 @@ public class Problema5 extends CommandLineProgram {
 
                 int sum = 0;
 
-                for(int n = 0; n < right.length; n++){
+                for(int k = 0;k < right.length; k++){
 
-                    sum += left[i][n] * right[n][j];
+                    sum += left[i][k] * right[k][j];
 
                 }
 
@@ -42,7 +42,7 @@ public class Problema5 extends CommandLineProgram {
         print("{");
 
         for(int i = 0; i < matrix.length; i++){
-            
+
 
             print("{");
 
