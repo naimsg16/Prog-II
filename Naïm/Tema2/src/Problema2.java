@@ -3,85 +3,55 @@ import acm.graphics.GOval;
 import java.awt.Color;
 import acm.util.RandomGenerator;
 
-//NOTA: FES-HO AMB UNA ARRAY D'OBJECTES!!!
 public class Problema2 extends GraphicsProgram {
 
-    double SIZE = 50.0;
-    double NUM_TURTLES = 3.0;
+    int NUM_TURTLES = 6;
+    double SIZE = 100.0 / ((double) NUM_TURTLES - 1);
     double TIMEOUT = 20.0;
 
     public void run() {
-        double y = getHeight() / NUM_TURTLES;
-        GOval turtle1 = new GOval(0.0,y/2.0,SIZE,SIZE);
-        GOval turtle2 = new GOval(0.0,y + y/2.0,SIZE,SIZE);
-        GOval turtle3 = new GOval(0.0,2*y + y/2.0,SIZE,SIZE);
-        setTurtle(turtle1);
-        setTurtle(turtle2);
-        setTurtle(turtle3);
-        startRace(turtle1,turtle2,turtle3);
-
+        GOval[] turtles = new GOval[NUM_TURTLES];
+        setTurtles(turtles);
+        startRace(turtles);
     }
 
-    public void setTurtle(GOval turtle){
-        turtle.setFilled(true);
-        turtle.setColor(Color.GREEN);
-        turtle.setFillColor(Color.GREEN);
-        add(turtle);
-
-    }
-
-    public void startRace(GOval turtle1, GOval turtle2, GOval turtle3){
-
-        while(!touchingEdge(turtle1,turtle2,turtle3)){
-            moveTurtles(turtle1,turtle2,turtle3);
+    public void setTurtles(GOval[] turtles){
+        double y = getHeight() / (double)NUM_TURTLES;
+        for(int i = 0; i < NUM_TURTLES; i++) {
+            turtles[i] = new GOval(0.0, i * y + y / 2.0, SIZE, SIZE);
+            turtles[i].setFilled(true);
+            turtles[i].setColor(Color.GREEN);
+            turtles[i].setFillColor(Color.GREEN);
+            add(turtles[i]);
         }
-
-
     }
-    public void moveTurtles(GOval turtle1, GOval turtle2, GOval turtle3){
-        turtle1.move(rollDie(),0.0);
-        turtle2.move(rollDie(),0.0);
-        turtle3.move(rollDie(),0.0);
+
+    public void startRace(GOval[] turtles){
+        while(!touchingEdge(turtles)){
+            moveTurtles(turtles);
+        }
+    }
+    public void moveTurtles(GOval[] turtles){
+        for(int i = 0; i < NUM_TURTLES; i++){
+            turtles[i].move(rollDie(),0.0);
+        }
         pause(TIMEOUT);
     }
-    public int winnerTurtle(GOval turtle1, GOval turtle2, GOval turtle3){
 
-        if(getWidth() < turtle1.getX() + SIZE){
-            turtle1.setColor(Color.RED);
-            turtle1.setFillColor(Color.RED);
-            return 1;
-        }
-        if(getWidth() < turtle2.getX() + SIZE){
-            turtle2.setColor(Color.RED);
-            turtle2.setFillColor(Color.RED);
-            return 2;
-        }
-        if(getWidth() < turtle3.getX() + SIZE ){
-            turtle3.setColor(Color.RED);
-            turtle3.setFillColor(Color.RED);
-            return 3;
-        }
+    public boolean touchingEdge(GOval[] turtles){
+        boolean finish = false;
 
-        return 0;
+        for(int i = 0; i < NUM_TURTLES && !finish; i++){
+            if(getWidth() < turtles[i].getX() + SIZE){
+                finish = true;
+                turtles[i].setColor(Color.RED);
+                turtles[i].setFillColor(Color.RED);
+            }
+        }
+        return finish;
     }
-
-    public boolean touchingEdge(GOval turtle1, GOval turtle2, GOval turtle3){
-        return winnerTurtle(turtle1, turtle2, turtle3) != 0;
-    }
-
     public int rollDie(){
         RandomGenerator rgen = RandomGenerator.getInstance();
         return rgen.nextInt(1,6);
     }
-
-
-
-
-
-
-
-
-
-
-
 }
