@@ -5,7 +5,7 @@ import acm.util.RandomGenerator;
 
 public class Problema2 extends GraphicsProgram {
 
-    int NUM_TURTLES = 6;
+    int NUM_TURTLES = 3;
     double SIZE = 100.0 / ((double) NUM_TURTLES - 1);
     double TIMEOUT = 20.0;
 

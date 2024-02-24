@@ -1,8 +1,9 @@
 import acm.program.ConsoleProgram;
 
 public class Problema3 extends ConsoleProgram {
-
-    int LETTERS = ('z'-'a') + 1;
+    String UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    String LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
+    int LETTERS = UPPERCASE.length();
 
     public void run(){
 
@@ -12,13 +13,14 @@ public class Problema3 extends ConsoleProgram {
         println("The encoded message is: " + encoded );
         println("The plaintext message is: " + encodeCaesar(encoded,realDistance(-distance)));
 
+        //test();
     }
 
     public String encodeCaesar(String message, int distance){
         char[] chars = message.toCharArray();
 
         for(int i = 0; i < chars.length; i++){
-            chars[i] = (char) (newCharPosition(chars[i],distance));
+            chars[i] = newChar(chars[i], distance);
         }
         return new String(chars);
     }
@@ -36,18 +38,29 @@ public class Problema3 extends ConsoleProgram {
         }
         return realDistance;
     }
-    public int newCharPosition(char ch, int distance){
-        int position = ch + distance;
-        if(isLower(ch) && position > 'z' ) {
-            return ('a' - 1) + (position - 'z');
+    public char newChar(char ch, int distance){
+        int position;
+        if(isUpper(ch)){
+            position = (UPPERCASE.indexOf(ch) + distance) % LETTERS;
+            return UPPERCASE.charAt(position);
         }
-        if(isUpper(ch) && position > 'Z'){
-            return ('A'- 1) + (position - 'Z');
-        }
-        if(isUpper(ch) || isLower(ch)){
-            return position;
+        if(isLower(ch)){
+            position = (LOWERCASE.indexOf(ch) + distance) % LETTERS;
+            return LOWERCASE.charAt(position);
         }
         return ch;
+    }
+    public void test(){
+        String[] text = new String[] {"This is an easy test.","This is an inverse test.","This!!test$%67576has&/72982symbols.","This should remain the same."};
+        int[] distance = new int[] {15,-8,21,0};
+        String[] result = new String[] {"Iwxh xh pc tphn ithi.","Lzak ak sf afnwjkw lwkl.","Ocdn!!ozno$%67576cvn&/72982nthwjgn.","This should remain the same."};
+
+        for(int i = 0; i < text.length; i++){
+            String expected = encodeCaesar(text[i],realDistance(distance[i]));
+            if(result[i].equals(expected)){
+                println("OK " + (i+1));
+            }
+        }
     }
 }
 
