@@ -11,14 +11,14 @@ public class Problema1 extends GraphicsProgram{
         double x = (getWidth() - SIZE) / 2.0;
         double y = (getHeight()- SIZE) / 2.0;
         GRect square = new GRect(x,y,SIZE,SIZE);
-        setSquare(square);
+        addSquare(square);
         moveSquare(square);
     }
 
-    public void setSquare(GRect square){
+    public void addSquare(GRect square){
         square.setColor(Color.RED);
         square.setFilled(true);
-        square.setFillColor(Color.RED);
+        //square.setFillColor(Color.RED); not needed, fill color starts as figure color
         add(square);
     }
 
