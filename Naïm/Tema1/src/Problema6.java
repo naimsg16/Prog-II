@@ -17,4 +17,7 @@ public class Problema6 extends DialogProgram{
         }
         return new String (chars, 1, chars.length - 2);
     }
+    public static void main(String[] args){
+        new Problema6().start(args);
+    }
 }

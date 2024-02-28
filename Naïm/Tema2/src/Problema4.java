@@ -22,4 +22,7 @@ public class Problema4 extends ConsoleProgram{
         }
         return longest;
     }
+    public static void main(String[] args){
+        new Problema4().start(args);
+    }
 }

@@ -53,4 +53,7 @@ public class Problema2 extends GraphicsProgram {
         RandomGenerator rgen = RandomGenerator.getInstance();
         return rgen.nextInt(1,6);
     }
+    public static void main(String[] args){
+        new Problema2().start(args);
+    }
 }

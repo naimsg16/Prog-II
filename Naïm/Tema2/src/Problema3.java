@@ -62,5 +62,8 @@ public class Problema3 extends ConsoleProgram {
             }
         }
     }
+    public static void main(String[] args){
+        new Problema3().start(args);
+    }
 }
 

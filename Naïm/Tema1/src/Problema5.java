@@ -65,6 +65,7 @@ public class Problema5 extends CommandLineProgram {
         println("}");
 
     }
-
-
+    public static void main(String[] args){
+        new Problema5().start(args);
+    }
 }

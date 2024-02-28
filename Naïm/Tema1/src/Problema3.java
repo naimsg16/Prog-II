@@ -36,6 +36,7 @@ public class Problema3 extends CommandLineProgram {
 
         println("}");
     }
-
-
+    public static void main(String[] args){
+        new Problema3().start(args);
+    }
 }

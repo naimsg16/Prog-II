@@ -53,4 +53,7 @@ public class Problema1 extends GraphicsProgram{
         return getWidth() < square.getX() + SIZE || square.getX() < 0.0;
     }
 
+    public static void main(String[] args){
+        new Problema1().start(args);
+    }
 }

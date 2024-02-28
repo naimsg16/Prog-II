@@ -24,4 +24,7 @@ public class Problema7 extends DialogProgram {
         }
         return new String(result);
     }
+    public static void main(String[] args){
+        new Problema7().start(args);
+    }
 }

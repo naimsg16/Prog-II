@@ -31,4 +31,7 @@ public class Problema5 extends ConsoleProgram{
         }
         return false;
     }
+    public static void main(String[] args){
+        new Problema5().start(args);
+    }
 }

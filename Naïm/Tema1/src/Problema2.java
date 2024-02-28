@@ -23,4 +23,7 @@ public class Problema2 extends CommandLineProgram{
 
         return max;
     }
+    public static void main(String[] args){
+        new Problema2().start(args);
+    }
 }
