@@ -17,7 +17,6 @@ public class Problema2 extends GraphicsProgram {
 
     public void addTurtles(GOval[] turtles){
         double size = (getHeight() / (double) NUM_TURTLES) - (PADDING * 2);
-        double y = getHeight() / (double)NUM_TURTLES;
         for(int i = 0; i < NUM_TURTLES; i++) {
             turtles[i] = new GOval(0.0, i*(size + PADDING) + PADDING, size, size);
             turtles[i].setColor(Color.GREEN);
