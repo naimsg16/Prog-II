@@ -5,8 +5,8 @@ import acm.util.RandomGenerator;
 
 public class Problema2 extends GraphicsProgram {
 
-    int NUM_TURTLES = 4;
-    double SIZE = 100.0 / ((double) NUM_TURTLES - 1); // SIZE = getHeight / NUM_TURTLES
+    int NUM_TURTLES = 5 ;
+    double PADDING = 8.0;
     double TIMEOUT = 20.0;
 
     public void run() {
@@ -16,9 +16,10 @@ public class Problema2 extends GraphicsProgram {
     }
 
     public void addTurtles(GOval[] turtles){
+        double size = (getHeight() / (double) NUM_TURTLES) - (PADDING * 2);
         double y = getHeight() / (double)NUM_TURTLES;
         for(int i = 0; i < NUM_TURTLES; i++) {
-            turtles[i] = new GOval(0.0, i * y + y / 2.0, SIZE, SIZE);
+            turtles[i] = new GOval(0.0, i*(size + PADDING) + PADDING, size, size);
             turtles[i].setColor(Color.GREEN);
             turtles[i].setFilled(true);
             add(turtles[i]);
@@ -26,6 +27,7 @@ public class Problema2 extends GraphicsProgram {
     }
 
     public void startRace(GOval[] turtles){
+        waitForClick();
         while(!touchingEdge(turtles)){
             moveTurtles(turtles);
         }
@@ -41,7 +43,7 @@ public class Problema2 extends GraphicsProgram {
         boolean finish = false;
 
         for(int i = 0; i < NUM_TURTLES && !finish; i++){
-            if(getWidth() < turtles[i].getX() + SIZE){
+            if(getWidth() < turtles[i].getX() + turtles[i].getWidth()){
                 finish = true;
                 turtles[i].setColor(Color.RED);
                 turtles[i].setFillColor(Color.RED);
