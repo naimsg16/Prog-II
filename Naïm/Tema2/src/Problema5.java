@@ -5,9 +5,9 @@ public class Problema5 extends ConsoleProgram{
     String[] IGNORE = {"el","la","un","unos","y","o","de"};
 
     public void run(){
-        String line = readLine("Write Something and I'll show you its acronym:");
+        String line = readLine("Write something and I'll show you its acronym:");
         String acronym = makeAcronym(line);
-        println("\"" + line + "\"" + " acronym is " + "\"" + acronym + "\"");
+        println("\"" + line + "\"'s" + " acronym is " + "\"" + acronym + "\"");
     }
 
     public String makeAcronym(String line){
