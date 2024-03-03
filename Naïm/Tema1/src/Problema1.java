@@ -48,7 +48,8 @@ public class Problema1 extends CommandLineProgram{
                 }
             }
         }
-
-
+    }
+    public static void main(String[] args){
+        new Problema1().start(args);
     }
 }
