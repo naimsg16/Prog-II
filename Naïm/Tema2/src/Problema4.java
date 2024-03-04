@@ -3,7 +3,7 @@ import java.util.StringTokenizer;
 
 public class Problema4 extends ConsoleProgram{
 
-    String DELIMITERS = " .;:,0123456789";
+    String DELIMITERS = " .,:;0123456789";
 
     public void run(){
         String line = readLine("Write something:");
