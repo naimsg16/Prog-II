@@ -3,4 +3,5 @@
 >Aquí aniré pujant els meus programes de Java.
 >Hola Naim!
 >Hola Navas i Naim i Isaac!
->Hola Achraf!
+>Soc el Edu visca Espanya!
+>Hola eduuu!
