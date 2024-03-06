@@ -2,7 +2,7 @@ import acm.program.*;
 import java.util.StringTokenizer;
 public class Problema5 extends ConsoleProgram{
 
-    String[] IGNORE = {"el","la","un","unos","y","o","de"};
+    String[] IGNORE = new String[] {"el","la","un","unos","y","o","de"};
 
     public void run(){
         String line = readLine("Write something and I'll show you its acronym:");
@@ -14,10 +14,10 @@ public class Problema5 extends ConsoleProgram{
         StringTokenizer txt = new StringTokenizer(line);
         String acronym = "";
         while(txt.hasMoreTokens()){
-            String next = txt.nextToken();
-            if(!ignoreWord(next)){
-                String first = next.substring(0,1);
-                acronym += (first.toUpperCase() + ".");
+            String word = txt.nextToken();
+            if(!ignoreWord(word)){
+                String first = word.substring(0,1);
+                acronym += first.toUpperCase() + ".";
             }
         }
         return acronym;

@@ -13,11 +13,11 @@ public class Problema4 extends ConsoleProgram{
 
     public String longestWord(String line){
         StringTokenizer txt = new StringTokenizer(line,DELIMITERS);
-        String longest = txt.nextToken();
+        String longest = "";
         while(txt.hasMoreTokens()){
-            String next = txt.nextToken();
-            if(longest.length() < next.length()){ // Si hi ha més paraules de la mateixa llargada, es queda amb la primera.
-                longest = next;
+            String word = txt.nextToken();
+            if(longest.length() < word.length()){ // Si hi ha més paraules de la mateixa llargada, es queda amb la primera.
+                longest = word;
             }
         }
         return longest;
