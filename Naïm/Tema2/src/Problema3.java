@@ -13,16 +13,15 @@ public class Problema3 extends ConsoleProgram {
         println("The encoded message is: " + encoded );
         println("The plaintext message is: " + encodeCaesar(encoded,realDistance(-distance)));
 
-        //test();
+        test();
     }
 
     public String encodeCaesar(String message, int distance){
-        char[] chars = message.toCharArray();
-
-        for(int i = 0; i < chars.length; i++){
-            chars[i] = newChar(chars[i], distance);
+        char[] result = new char[message.length()];
+        for(int i = 0; i < message.length(); i++){
+            result[i] = newChar(message.charAt(i), distance);
         }
-        return new String(chars);
+        return new String(result);
     }
 
     public boolean isLower(char ch){

@@ -24,7 +24,6 @@ public class Problema1 extends GraphicsProgram{
 
    public void moveSquare(GRect square){
        double movement = MOVEMENT;
-
        while(true){
            square.move(movement,0.0);
            pause(TIMEOUT);
