@@ -1,36 +1,78 @@
 package Problema6;
 import acm.program.*;
+
+import java.util.StringTokenizer;
+
 public class Problema6 extends CommandLineProgram{
 
     public void run(){
 
-        //testAdd();
-        Rational r = Rational.add(new Rational(1,-2),new Rational(4,3));
-        println(r.toString());
+        test();
 
     }
 
     public void test(){
-
-
+        testAdd();
+        testSubstract();
     }
 
     public void testAdd(){
-        Rational[] expected = new Rational[] {new Rational(3,4),
-                                              new Rational(5,6),
-                                              new Rational(-4,7)};
-//        Rational[] operations = ;
+        Rational[] expected = new Rational[] {
+                new Rational(3,4),
+                new Rational(5,6),
+                new Rational(-4,3),
+                new Rational(4,1)
+        };
+        Rational[] operator1 = new Rational[] {
+                new Rational(1,4),
+                new Rational(7,12),
+                new Rational(13,-6),
+                new Rational(20,9)
+        };
+        Rational[] operator2 = new Rational[] {
+                new Rational(2,4),
+                new Rational(2,8),
+                new Rational(5,6),
+                new Rational(16,9)
+        };
+        for( int i = 0; i < expected.length; i++){
+            check(expected[i],Rational.add(operator1[i],operator2[i]),"add",i+1);
+        }
 
-        check(expected[0],Rational.add(new Rational(1,4),new Rational(2,4)),"add",0);
+    }
+
+    public void testSubstract(){
+        Rational[] expected = new Rational[] {
+                new Rational(-11,10),
+                new Rational(0,1),
+                new Rational(7,30),
+                new Rational(1,1)
+        };
+        Rational[] operator1 = new Rational[] {
+                new Rational(3,-5),
+                new Rational(2,8),
+                new Rational(5,6),
+                new Rational(6,4)
+        };
+        Rational[] operator2 = new Rational[] {
+                new Rational(2,4),
+                new Rational(1,4),
+                new Rational(3,5),
+                new Rational(1,2)
+        };
+        for( int i = 0; i < expected.length; i++){
+            check(expected[i],Rational.substract(operator1[i],operator2[i]),"substract",i+1);
+        }
 
     }
 
     public void check(Rational expected, Rational actual, String operation, int test){
+
         if(expected.equalsRational(actual)){
             println("OK in test #" + test + " of " + operation);
         }else{
             print("WRONG in test #" + test + " of " + operation);
-            print("\t it is " + actual.toString() + " but it should be " + expected.toString());
+            println(":it is " + actual.toString() + " but it should be " + expected.toString());
         }
     }
 

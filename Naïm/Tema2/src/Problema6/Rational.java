@@ -11,19 +11,22 @@ public class Rational {
     }
 
     public static Rational add(Rational r1, Rational r2){
-        moveSign(r1);
-        moveSign(r2);
-        int resultNum = r1.num * r2.den + r1.den * r2.num;
-        int resultDen = r1.den * r2.den;
-        Rational result = new Rational(resultNum,resultDen);
+
+        int lcm = lcm(r1.den,r2.den);
+        int num1 = lcm * r1.num / r1.den;
+        int num2 = lcm * r2.num / r2.den;
+
+        Rational result = new Rational(num1 + num2,lcm);
         simplify(result);
+
         return result;
     }
-//    public static Rational substract(Rational r1, Rational r2){
-//
-//
-//
-//    }
+    public static Rational substract(Rational r1, Rational r2){
+        r2.num = -r2.num;
+        return Rational.add(r1,r2);
+
+
+    }
 //    public static Rational multiply(Rational r1, Rational r2){
 //
 //
@@ -34,12 +37,23 @@ public class Rational {
 //    }
 
     private static void simplify (Rational r){
-        int gcd = gcd(r.num,r.den);
+        int gcd = gcd(Math.abs(r.num),Math.abs(r.den));
         r.num /= gcd;
         r.den /= gcd;
+        moveSign(r);
     }
 
+    private static int lcm(int num, int den){
+        int lcd = Math.max(num,den);
+        while(lcd % num != 0 || lcd % den != 0){
+            lcd += 1;
+        }
+        return lcd;
+    }
     private static int gcd(int num, int den){
+        if (num == 0 ){
+            return den;
+        }
         int gcd = Math.min(num,den);
         while(num % gcd != 0 || den % gcd != 0){
             gcd -= 1;
