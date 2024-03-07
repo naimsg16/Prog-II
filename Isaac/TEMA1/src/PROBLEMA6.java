@@ -12,15 +12,18 @@ public class PROBLEMA6 extends DialogProgram{
 
             char[] chars = str.toCharArray();
 
-            if(chars.length =< 2){
+            if(chars.length <= 2){
 
                 return "El string está vacío o solamente consiste en un caràcter";
-                return ""; //string buida, no importe
+                // return ""; string buida, no importe
             }
 
             return new String (chars, 1, chars.length - 2); //la agafem en la posicio 1 i la llargada de caracters menys 2
 
         }
+    public static void main (String[] args) {
+        new PROBLEMA6().start(args);
+    }
 
     }
-}
+
