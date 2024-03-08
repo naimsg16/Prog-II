@@ -11,26 +11,25 @@ public class Rational {
     }
 
     public static Rational add(Rational r1, Rational r2){
-
         int lcm = lcm(r1.den,r2.den);
         int num1 = lcm * r1.num / r1.den;
         int num2 = lcm * r2.num / r2.den;
 
         Rational result = new Rational(num1 + num2,lcm);
         simplify(result);
-
         return result;
     }
     public static Rational substract(Rational r1, Rational r2){
         Rational negativeR2 = new Rational(-r2.num,r2.den);
         return Rational.add(r1,negativeR2);
-
-
     }
-//    public static Rational multiply(Rational r1, Rational r2){
-//
-//
-//    }
+    public static Rational multiply(Rational r1, Rational r2){
+        int resNum = r1.num * r2.num;
+        int resDen = r1.den * r2.den;
+        Rational result = new Rational(resNum,resDen);
+        simplify(result);
+        return result;
+    }
 //    public static Rational divide(Rational r1, Rational r2){
 //
 //
