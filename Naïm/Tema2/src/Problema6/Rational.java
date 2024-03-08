@@ -22,8 +22,8 @@ public class Rational {
         return result;
     }
     public static Rational substract(Rational r1, Rational r2){
-        r2.num = -r2.num;
-        return Rational.add(r1,r2);
+        Rational negativeR2 = new Rational(-r2.num,r2.den);
+        return Rational.add(r1,negativeR2);
 
 
     }

@@ -63,6 +63,30 @@ public class Problema6 extends CommandLineProgram{
         for( int i = 0; i < expected.length; i++){
             check(expected[i],Rational.substract(operator1[i],operator2[i]),"substract",i+1);
         }
+    }
+
+    public void testMultiplication(){
+        Rational[] expected = new Rational[] {
+                new Rational(3,14),
+                new Rational(4,1),
+                new Rational(5,2),
+                new Rational(-12,1)
+        };
+        Rational[] operator1 = new Rational[] {
+                new Rational(3,4),
+                new Rational(4,3),
+                new Rational(-5,3),
+                new Rational(-9,6)
+        };
+        Rational[] operator2 = new Rational[] {
+                new Rational(2,7),
+                new Rational(6,2),
+                new Rational(9,-6),
+                new Rational(8,1)
+        };
+        for( int i = 0; i < expected.length; i++){
+            check(expected[i],Rational.substract(operator1[i],operator2[i]),"multiplication",i+1);
+        }
 
     }
 
