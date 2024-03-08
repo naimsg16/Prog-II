@@ -14,6 +14,7 @@ public class Problema6 extends CommandLineProgram{
     public void test(){
         testAdd();
         testSubstract();
+        testMultiply();
     }
 
     public void testAdd(){
@@ -65,7 +66,7 @@ public class Problema6 extends CommandLineProgram{
         }
     }
 
-    public void testMultiplication(){
+    public void testMultiply(){
         Rational[] expected = new Rational[] {
                 new Rational(3,14),
                 new Rational(4,1),
@@ -85,7 +86,7 @@ public class Problema6 extends CommandLineProgram{
                 new Rational(8,1)
         };
         for( int i = 0; i < expected.length; i++){
-            check(expected[i],Rational.substract(operator1[i],operator2[i]),"multiplication",i+1);
+            check(expected[i],Rational.multiply(operator1[i],operator2[i]),"multiplication",i+1);
         }
 
     }
