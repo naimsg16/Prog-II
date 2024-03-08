@@ -1,6 +1,6 @@
 import acm.program.*;
 
-public class Problema7 extends DialogProgram {
+public class PROBLEMA7 extends DialogProgram {
 
     public void run(){
 
@@ -25,6 +25,9 @@ public class Problema7 extends DialogProgram {
 
         return new String(result);
 
+    }
+    public static void main (String[] args) {
+        new PROBLEMA7().start(args);
     }
 }
 

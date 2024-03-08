@@ -8,24 +8,24 @@ public class PROBLEMA5 extends CommandLineProgram{
         int[][] result = matrixMultiplication(left, right);
         println(result);
     }
-    public int[][] matrixMultiplication(int[][] left, int[][] rigth){
+    public int[][] matrixMultiplication(int[][] left, int[][] right){
 
-        int fR = left.lenght; //filesResultant
-        int cR = right[0].lenght; //columnesResultant
+        int fR = left.length; //filesResultant
+        int cR = right[0].length; //columnesResultant
         int [][] m = new int[fR][cR];
 
         for ( int i = 0 ; i < fR; i++){
             for ( int j = 0 ; j < cR ; j++){
-                m[i][j] = calc MM(left, right, i, j);
+                m[i][j] = calcMM(left, right, i, j);
             }
         }
     return(m);
     }
 
-    public int [][] calc MM(int[][]left, int[][]right, int i, int j){
-        int valor = 0;
+    public int calcMM(int[][]left, int[][]right, int i, int j){
+        int val = 0;
 
-        for(int k=0 ; k < right.lenght ; k++){
+        for(int k=0 ; k < right.length ; k++){
             val += left[i][k] * right[k][j];
 
         }
@@ -62,6 +62,9 @@ public class PROBLEMA5 extends CommandLineProgram{
         }
 
         println("}");
+    }
+    public static void main (String[] args) {
+        new PROBLEMA5().start(args);
     }
 }
 
