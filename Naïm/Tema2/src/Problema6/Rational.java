@@ -30,10 +30,13 @@ public class Rational {
         simplify(result);
         return result;
     }
-//    public static Rational divide(Rational r1, Rational r2){
-//
-//
-//    }
+    public static Rational divide(Rational r1, Rational r2){
+        int resNum = r1.num * r2.den;
+        int resDen = r1.den * r2.num;
+        Rational result = new Rational(resNum,resDen);
+        simplify(result);
+        return result;
+    }
 
     private static void simplify (Rational r){
         int gcd = gcd(Math.abs(r.num),Math.abs(r.den));

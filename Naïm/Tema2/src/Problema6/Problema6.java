@@ -6,15 +6,14 @@ import java.util.StringTokenizer;
 public class Problema6 extends CommandLineProgram{
 
     public void run(){
-
         test();
-
     }
 
     public void test(){
         testAdd();
         testSubstract();
         testMultiply();
+        testDivide();
     }
 
     public void testAdd(){
@@ -87,6 +86,31 @@ public class Problema6 extends CommandLineProgram{
         };
         for( int i = 0; i < expected.length; i++){
             check(expected[i],Rational.multiply(operator1[i],operator2[i]),"multiplication",i+1);
+        }
+
+    }
+
+    public void testDivide(){
+        Rational[] expected = new Rational[] {
+                new Rational(5,6),
+                new Rational(1,1),
+                new Rational(33,4),
+                new Rational(0,1)
+        };
+        Rational[] operator1 = new Rational[] {
+                new Rational(4,3),
+                new Rational(3,4),
+                new Rational(-9,3),
+                new Rational(0,3)
+        };
+        Rational[] operator2 = new Rational[]{
+                new Rational(8, 5),
+                new Rational(15, 20),
+                new Rational(4, -11),
+                new Rational(4, 8)
+        };
+        for( int i = 0; i < expected.length; i++){
+            check(expected[i],Rational.divide(operator1[i],operator2[i]),"divide",i+1);
         }
 
     }
