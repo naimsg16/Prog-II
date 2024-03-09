@@ -1,7 +1,5 @@
 package Problema9;
-import Problema6.Problema6;
 import acm.program.*;
-import acm.graphics.*;
 
 public class Problema9 extends GraphicsProgram {
     int NUM_TURTLES = 5 ;
