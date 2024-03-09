@@ -1,4 +1,4 @@
-package Problema6;
+package Problema7;
 
 public class Rational {
 
@@ -10,6 +10,37 @@ public class Rational {
         this.den = denominator;
     }
 
+    //-------------------------------------------------------------------
+
+    //Instance methods
+
+    public void add(Rational rational){
+        int lcm = lcm(this.den,rational.den);
+        int num1 = lcm * this.num / this.den;
+        int num2 = lcm * rational.num / rational.den;
+        this.num = num1 + num2;
+        this.den = lcm;
+        simplify(this);
+    }
+    public void substract( Rational rational){
+        Rational negativeRational = new Rational(-rational.num,rational.den);
+        this.add(negativeRational);
+    }
+
+    public void multiply(Rational rational){
+        this.num *= rational.num;
+        this.den *= rational.den;
+        simplify(this);
+    }
+
+    public void divide(Rational rational){
+        this.num *= rational.den;
+        this.den *= rational.num;
+        simplify(this);
+    }
+
+    //---------------------------------------------------------------
+    //STATIC METHODS
     public static Rational add(Rational r1, Rational r2){
         int lcm = lcm(r1.den,r2.den);
         int num1 = lcm * r1.num / r1.den;
@@ -37,6 +68,8 @@ public class Rational {
         simplify(result);
         return result;
     }
+
+    //--------------------------------------------------
 
     private static void simplify (Rational r){
         int gcd = gcd(Math.abs(r.num),Math.abs(r.den));
