@@ -33,6 +33,18 @@ public class Complex {
         return Math.toDegrees(Math.atan(this.imaginaryPart / this.realPart));
     }
 
+    public void setModule(double module){
+        double arg = this.argument();
+        this.realPart = module * Math.cos(arg);
+        this.imaginaryPart = module * Math.sin(arg);
+    }
+
+    public void setArgument(double argument){
+        double mod = this.module();
+        this.realPart = mod * Math.cos(argument);
+        this.imaginaryPart = mod * Math.sin(argument);
+    }
+
     public double getRealPart(){
         return this.realPart;
     }
