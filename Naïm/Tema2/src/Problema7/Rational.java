@@ -11,7 +11,6 @@ public class Rational {
     }
 
     //-------------------------------------------------------------------
-
     //Instance methods
 
     public void add(Rational rational){
@@ -40,7 +39,8 @@ public class Rational {
     }
 
     //---------------------------------------------------------------
-    //STATIC METHODS
+    //Static methods
+
     public static Rational add(Rational r1, Rational r2){
         int lcm = lcm(r1.den,r2.den);
         int num1 = lcm * r1.num / r1.den;
@@ -72,7 +72,7 @@ public class Rational {
     //--------------------------------------------------
 
     private void simplify (){
-        int gcd = gcd(Math.abs(this.num),Math.abs(this.den));
+        int gcd = this.gcd();
         this.num /= gcd;
         this.den /= gcd;
         this.moveSign();
@@ -85,7 +85,9 @@ public class Rational {
         }
         return lcd;
     }
-    private static int gcd(int num, int den){
+    private int gcd(){
+        int num = Math.abs(this.num);
+        int den = Math.abs(this.den);
         if (num == 0 ){
             return den;
         }
@@ -100,7 +102,7 @@ public class Rational {
         if(this.den == 1){
             return String.valueOf(this.num);
         }
-        return String.valueOf(this.num) + "/" + String.valueOf(this.den);
+        return this.num + "/" + this.den;
     }
 
     public boolean equalsRational (Rational r){
