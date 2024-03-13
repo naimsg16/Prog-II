@@ -8,6 +8,7 @@ public class Rational {
     public Rational(int numerator, int denominator){
         this.num = numerator;
         this.den = denominator;
+        this.simplify();
     }
 
     //-------------------------------------------------------------------
@@ -46,9 +47,7 @@ public class Rational {
         int num1 = lcm * r1.num / r1.den;
         int num2 = lcm * r2.num / r2.den;
 
-        Rational result = new Rational(num1 + num2,lcm);
-        result.simplify();
-        return result;
+        return new Rational(num1 + num2,lcm);
     }
     public static Rational substract(Rational r1, Rational r2){
         Rational negativeR2 = new Rational(-r2.num,r2.den);
@@ -57,16 +56,12 @@ public class Rational {
     public static Rational multiply(Rational r1, Rational r2){
         int resNum = r1.num * r2.num;
         int resDen = r1.den * r2.den;
-        Rational result = new Rational(resNum,resDen);
-        result.simplify();
-        return result;
+        return new Rational(resNum,resDen);
     }
     public static Rational divide(Rational r1, Rational r2){
         int resNum = r1.num * r2.den;
         int resDen = r1.den * r2.num;
-        Rational result = new Rational(resNum,resDen);
-        result.simplify();
-        return result;
+        return new Rational(resNum,resDen);
     }
 
     //--------------------------------------------------
@@ -79,11 +74,11 @@ public class Rational {
     }
 
     private static int lcm(int den1, int den2){
-        int lcd = Math.max(den1,den2);
-        while(lcd % den1 != 0 || lcd % den2 != 0){
-            lcd += 1;
+        int lcm = Math.max(den1,den2);
+        while(lcm % den1 != 0 || lcm % den2 != 0){
+            lcm += 1;
         }
-        return lcd;
+        return lcm;
     }
     private int gcd(){
         int num = Math.abs(this.num);
@@ -91,11 +86,17 @@ public class Rational {
         if (num == 0 ){
             return den;
         }
-        int gcd = Math.min(num,den);
-        while(num % gcd != 0 || den % gcd != 0){
-            gcd -= 1;
+        while(num != den){
+            if(num > den){
+                num -= den;
+            }else{
+                den -= num;
+            }
+            if(num == 1 || den == 1){
+                return 1;
+            }
         }
-        return gcd;
+        return num;
     }
 
     public String toString (){
@@ -115,5 +116,4 @@ public class Rational {
             this.num = -this.num;
         }
     }
-
 }
