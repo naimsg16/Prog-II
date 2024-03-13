@@ -5,14 +5,17 @@ public class Problema8 extends CommandLineProgram{
 
     public void run(){
         test();
+        Complex z = new Complex(-1,-1);
+        println(z.toStringPolar());
+        println(z.toStringBinomial());
     }
 
     public void test(){
         Complex z1 = new Complex(3.0,4.0);
 
         println("CONSTRUCTOR:");
-        println("real part:" + z1.getRealPart());
-        println("imaginary part:" + z1.getImaginaryPart());
+        println("real part:" + z1.getReal());
+        println("imaginary part:" + z1.getImaginary());
         println(z1.toStringBinomial());
         println("module:" + z1.getModule());
         println("argument:" + z1.getArgument());
@@ -21,10 +24,10 @@ public class Problema8 extends CommandLineProgram{
 
         println("SETTERS:");
         println("SET BINOMIAL:");
-        z1.setRealPart(9.0);
-        z1.setImaginaryPart(16.0);
-        println("real part:" + z1.getRealPart());
-        println("imaginary part:" + z1.getImaginaryPart());
+        z1.setReal(9.0);
+        z1.setImaginary(16.0);
+        println("real part:" + z1.getReal());
+        println("imaginary part:" + z1.getImaginary());
         println(z1.toStringBinomial());;
         println("module:" + z1.getModule());
         println("argument:" + z1.getArgument());
@@ -34,8 +37,8 @@ public class Problema8 extends CommandLineProgram{
         println("SET POLAR:");
         z1.setModule(Math.sqrt(2.0));
         z1.setArgument(45.0);
-        println("real part:" + z1.getRealPart());
-        println("imaginary part:" + z1.getImaginaryPart());
+        println("real part:" + z1.getReal());
+        println("imaginary part:" + z1.getImaginary());
         println(z1.toStringBinomial());;
         println("module:" + z1.getModule());
         println("argument:" + z1.getArgument());
