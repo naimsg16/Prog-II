@@ -36,7 +36,7 @@ public class AccountsProgram extends CommandLineProgram {
     }
 
     private AccountsDB loadAccounts(){
-        return new AccountsDB(3,1);
+        return accountsDB;
     }
 
     public static void main(String[] args) {

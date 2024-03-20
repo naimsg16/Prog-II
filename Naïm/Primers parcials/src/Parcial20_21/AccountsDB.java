@@ -55,10 +55,10 @@ public class AccountsDB {
             }
         }
         widenDatabase();
-        return this.database.length - increment;
+        return this.database.length - increment - 1;
 
     }
-
+    
     private void widenDatabase(){
         Account[] widened = new Account[this.database.length + this.increment];
         for(int i = 0; i < this.database.length; i++){
