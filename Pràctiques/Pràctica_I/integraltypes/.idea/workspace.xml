@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="44ba6d32-9e8b-4653-a7da-553c1ac685a1" name="Changes" comment="Shortened and &amp; or">
+      <change beforePath="$PROJECT_DIR$/../../../Naïm/Primers parcials/src/Parcial20_21/AccountsDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Naïm/Primers parcials/src/Parcial20_21/AccountsDB.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1e905bda2a52269295ab491def2ce80ecca7a1d3" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;naimsg16&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3b61d6cf-a1c8-4809-85fb-0572af244ee8" />
+        <option name="url" value="https://github.com/naimsg16/integraltypes.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2d2CZIUDBeAGs1cvn45YtcAqygv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.IntegralTypes.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/naims/OneDrive/Escriptori/checkers&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-temurin-21.0.2-4caba194b151-7da56cdf" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="44ba6d32-9e8b-4653-a7da-553c1ac685a1" name="Changes" comment="" />
+      <created>1709196841723</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709196841723</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Mejoras">
+      <option name="closed" value="true" />
+      <created>1709316498792</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709316498792</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Final (1)">
+      <option name="closed" value="true" />
+      <created>1709459116895</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709459116895</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Final (1)">
+      <option name="closed" value="true" />
+      <created>1709485716412</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709485716412</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Final (2)">
+      <option name="closed" value="true" />
+      <created>1709491871049</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709491871049</updated>
+    </task>
+    <task id="LOCAL-00005" summary="function fillWithSign created">
+      <option name="closed" value="true" />
+      <created>1709655396687</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709655396687</updated>
+    </task>
+    <task id="LOCAL-00006" summary="functions chooseLength created">
+      <option name="closed" value="true" />
+      <created>1709657326838</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1709657326838</updated>
+    </task>
+    <task id="LOCAL-00007" summary="renamed variables and changed &quot;new int&quot; to &quot;zeroOfSize&quot;">
+      <option name="closed" value="true" />
+      <created>1709657725361</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709657725361</updated>
+    </task>
+    <task id="LOCAL-00008" summary="typo correction">
+      <option name="closed" value="true" />
+      <created>1709657981959</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709657981959</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added shiftRight function &amp; renamed numPos to distance">
+      <option name="closed" value="true" />
+      <created>1709670758804</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709670758804</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fillWithSign implemented in signedRightShift">
+      <option name="closed" value="true" />
+      <created>1709672456454</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709672456454</updated>
+    </task>
+    <task id="LOCAL-00011" summary="updated allBits with an enhanced for">
+      <option name="closed" value="true" />
+      <created>1709825203187</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709825203187</updated>
+    </task>
+    <task id="LOCAL-00012" summary="allBits restored">
+      <option name="closed" value="true" />
+      <created>1710063356079</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710063356079</updated>
+    </task>
+    <task id="LOCAL-00013" summary="allBits restored">
+      <option name="closed" value="true" />
+      <created>1710063572791</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1710063572791</updated>
+    </task>
+    <task id="LOCAL-00014" summary="allBits restored">
+      <option name="closed" value="true" />
+      <created>1710063584046</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1710063584046</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Merge remote-tracking branch 'origin/main'">
+      <option name="closed" value="true" />
+      <created>1710063640847</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1710063640847</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Renamed shiftRight">
+      <option name="closed" value="true" />
+      <created>1710170400852</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1710170400852</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Shortened and &amp; or">
+      <option name="closed" value="true" />
+      <created>1710230548161</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1710230548161</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="83" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="172" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="15" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="HIGHLIGHTERS">
+                <map>
+                  <entry key="CURRENT_BRANCH" value="true" />
+                  <entry key="MERGE_COMMITS" value="true" />
+                  <entry key="MY_COMMITS" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Mejoras" />
+    <MESSAGE value="Final (1)" />
+    <MESSAGE value="Final (2)" />
+    <MESSAGE value="function fillWithSign created" />
+    <MESSAGE value="functions chooseLength created" />
+    <MESSAGE value="renamed variables and changed &quot;new int&quot; to &quot;zeroOfSize&quot;" />
+    <MESSAGE value="typo correction" />
+    <MESSAGE value="added shiftRight function &amp; renamed numPos to distance" />
+    <MESSAGE value="fillWithSign implemented in signedRightShift" />
+    <MESSAGE value="updated allBits with an enhanced for" />
+    <MESSAGE value="correction" />
+    <MESSAGE value="allBits restored" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <MESSAGE value="Renamed shiftRight" />
+    <MESSAGE value="Shortened and &amp; or" />
+    <option name="LAST_COMMIT_MESSAGE" value="Shortened and &amp; or" />
+  </component>
+</project>

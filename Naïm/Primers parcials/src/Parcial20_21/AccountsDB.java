@@ -27,7 +27,6 @@ public class AccountsDB {
 
     public boolean transfer(String idFrom, String idTo, int amount){
         if(canTransfer(idFrom,idTo,amount)){
-            getAccount(idFrom).withdrawal(amount);
             getAccount(idTo).deposit(amount);
             return true;
         }
@@ -72,7 +71,6 @@ public class AccountsDB {
                 existingAccount(idFrom) &&
                 existingAccount(idTo) &&
                 amount >= 0 &&
-                amount < this.getAccount(idFrom).getBalance();
-
+                getAccount(idFrom).withdrawal(amount);
     }
 }
