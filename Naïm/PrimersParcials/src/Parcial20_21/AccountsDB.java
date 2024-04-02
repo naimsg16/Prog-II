@@ -4,7 +4,7 @@ public class AccountsDB {
 
     private Account[] database;
     private int numAcc;
-    private int sizeIncrement;
+    private final int sizeIncrement;
 
     public AccountsDB (int initialSize, int sizeIncrement){
         this.database = new Account[initialSize];

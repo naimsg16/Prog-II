@@ -3,10 +3,11 @@ package Parcial21_22;
 public class Cypher {
 
     private CharPair[] key;
-    private int numPairs = 0;
+    private int numPairs;
 
     public Cypher(int initialSize){
         this.key = new CharPair[initialSize];
+        this.numPairs = 0;
     }
 
     public boolean addPair(char from, char to){

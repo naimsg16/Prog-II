@@ -11,6 +11,14 @@ public class WordStats {
         this.words = new WordCounter[initialSize];
         this.numWords = 0;
     }
+    private WordCounter getWordCounter(String word){
+        for (int i = 0; i < this.numWords; i++){
+            if(this.words[i].getWord().equals(word)){
+                return this.words[i];
+            }
+        }
+        return null;
+    }
 
     public boolean countWord (String word){
         if(getWordCounter(word) != null){
@@ -21,6 +29,7 @@ public class WordStats {
             widenWords();
         }
         this.words[this.numWords] = new WordCounter(word);
+        numWords += 1;
         return true;
     }
 
@@ -53,12 +62,5 @@ public class WordStats {
         this.words = widened;
     }
 
-    private WordCounter getWordCounter(String word){
-        for (int i = 0; i < this.numWords; i++){
-            if(this.words[i].getWord().equals(word)){
-                return this.words[i];
-            }
-        }
-        return null;
-    }
+
 }
