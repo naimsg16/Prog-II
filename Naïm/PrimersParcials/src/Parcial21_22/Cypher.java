@@ -33,6 +33,7 @@ public class Cypher {
         for(int i = 0; i < this.key.length; i++){
             decode.key[i] = this.key[i].invert();
         }
+        decode.numPairs = this.numPairs;
         return decode;
     }
 
