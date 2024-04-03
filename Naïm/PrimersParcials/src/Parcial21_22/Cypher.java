@@ -29,7 +29,7 @@ public class Cypher {
         if(this.numPairs == 0){
             return null;
         }
-        Cypher decode = new Cypher(this.key.length);
+        Cypher decode = new Cypher(this.numPairs);
         for(int i = 0; i < this.key.length; i++){
             decode.key[i] = this.key[i].invert();
         }
