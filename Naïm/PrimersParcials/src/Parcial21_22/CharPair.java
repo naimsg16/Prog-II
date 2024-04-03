@@ -22,8 +22,6 @@ public class CharPair {
     }
 
     public CharPair invert(){
-        char from = this.to;
-        char to = this.from;
-        return new CharPair(from,to);
+        return new CharPair(this.to,this.from);
     }
 }
