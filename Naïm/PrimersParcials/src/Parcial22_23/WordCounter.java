@@ -2,7 +2,7 @@ package Parcial22_23;
 
 public class WordCounter {
 
-    private String word;
+    private final String word;
     private int counter;
 
     public WordCounter (String word){

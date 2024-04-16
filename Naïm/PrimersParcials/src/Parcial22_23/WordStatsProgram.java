@@ -13,7 +13,7 @@ public class WordStatsProgram extends CommandLineProgram {
 
     private void countWords(){
         String sentence = readLine("Enter a sentence: ");
-        if(sentence.isEmpty()){
+        if(sentence.length() == 0){
             println("The message is empty.");
         }else{
             StringTokenizer words = new StringTokenizer(sentence," ,.");

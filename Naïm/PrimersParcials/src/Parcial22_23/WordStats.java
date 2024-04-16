@@ -1,6 +1,5 @@
 package Parcial22_23;
 
-import javax.print.DocFlavor;
 
 public class WordStats {
 
