@@ -59,4 +59,8 @@ public class Turtle_Race extends GraphicsProgram {
             turtleList[i].move(rollDie(),0.0);
         }
     }
+    public static void main(String[] args) {
+        new Turtle_Race().start(args);
+    }
+
 }
