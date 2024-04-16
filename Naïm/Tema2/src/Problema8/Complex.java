@@ -1,56 +1,55 @@
 package Problema8;
-
 import java.text.DecimalFormat;
 
 public class Complex {
 
-    private double realPart;
-    private double imaginaryPart;
+    private double real;
+    private double imaginary;
 
     public Complex (double realPart, double imaginaryPart){
-        setRealPart(realPart);
-        setImaginaryPart(imaginaryPart);
+        setReal(realPart);
+        setImaginary(imaginaryPart);
     }
 
 
-    public void setRealPart(double realPart){
-        this.realPart = realPart;
+    public void setReal(double real){
+        this.real = real;
     }
-    public void setImaginaryPart(double imaginaryPart){
-        this.imaginaryPart = imaginaryPart;
+    public void setImaginary(double imaginary){
+        this.imaginary = imaginary;
     }
 
     private double module(){
-        return Math.sqrt(this.realPart * this.realPart + this.imaginaryPart * this.imaginaryPart);
+        return Math.sqrt(this.real * this.real + this.imaginary * this.imaginary);
     }
     private double argument(){
-        if(this.realPart == 0.0 && this.imaginaryPart == 0.0){
+        if(this.real == 0.0 && this.imaginary == 0.0){
             return 0.0;
         }
-        if(imaginaryPart == 0.0 && this.realPart < 0){
+        if(imaginary == 0.0 && this.real < 0){
             return -90.0;
         }
-        return Math.toDegrees(Math.atan(this.imaginaryPart / this.realPart));
+        return Math.toDegrees(Math.atan(this.imaginary / this.real));
     }
 
     public void setModule(double module){
         double arg = this.argument();
-        this.realPart = module * Math.cos(arg);
-        this.imaginaryPart = module * Math.sin(arg);
+        this.real = module * Math.cos(arg);
+        this.imaginary = module * Math.sin(arg);
     }
 
     public void setArgument(double argument){
         double mod = this.module();
-        this.realPart = mod * Math.cos(argument);
-        this.imaginaryPart = mod * Math.sin(argument);
+        this.real = mod * Math.cos(argument);
+        this.imaginary = mod * Math.sin(argument);
     }
 
-    public double getRealPart(){
-        return this.realPart;
+    public double getReal(){
+        return this.real;
     }
 
-    public double getImaginaryPart(){
-        return this.imaginaryPart;
+    public double getImaginary(){
+        return this.imaginary;
     }
 
     public double getModule(){
@@ -65,40 +64,40 @@ public class Complex {
     //Instance methods
 
     public void add (Complex z){
-        this.realPart += z.realPart;
-        this.imaginaryPart += z.imaginaryPart;
+        this.real += z.real;
+        this.imaginary += z.imaginary;
     }
 
     public void substract(Complex z){
-        this.realPart -= z.realPart;
-        this.imaginaryPart -= z.imaginaryPart;
+        this.real -= z.real;
+        this.imaginary -= z.imaginary;
     }
 
     public void multiply (Complex z){
         double module = this.module() * z.module();
         double argument = this.argument() + z.argument();
-        this.realPart = module * Math.cos(argument);
-        this.imaginaryPart = module * Math.sin(argument);
+        this.real = module * Math.cos(argument);
+        this.imaginary = module * Math.sin(argument);
     }
 
     public void divide (Complex z){
         double module = this.module() / z.module();
         double argument = this.argument() - z.argument();
-        this.realPart = module * Math.cos(argument);
-        this.imaginaryPart = module * Math.sin(argument);
+        this.real = module * Math.cos(argument);
+        this.imaginary = module * Math.sin(argument);
     }
 
     //--------------------------------------------------------------------
     //Static methods
 
     public Complex add (Complex z1, Complex z2){
-        double real = z1.realPart + z2.realPart;
-        double imaginary = z1.imaginaryPart + z2.imaginaryPart;
+        double real = z1.real + z2.real;
+        double imaginary = z1.imaginary + z2.imaginary;
         return new Complex(real,imaginary);
     }
     public Complex substract (Complex z1, Complex z2){
-        double real = z1.realPart - z2.realPart;
-        double imaginary = z1.imaginaryPart - z2.imaginaryPart;
+        double real = z1.real - z2.real;
+        double imaginary = z1.imaginary - z2.imaginary;
         return new Complex(real,imaginary);
     }
     public Complex multiply (Complex z1, Complex z2){
@@ -114,19 +113,19 @@ public class Complex {
 
 
     public boolean equalsComplex(Complex z){
-        return this.realPart == z.realPart && this.imaginaryPart == z.imaginaryPart;
+        return this.real == z.real && this.imaginary == z.imaginary;
     }
 
     public String toStringBinomial (){
-        String formattedRealPart = new DecimalFormat("0.##").format(this.realPart);
-        String formattedImaginaryPart = new DecimalFormat("0.##").format(this.imaginaryPart);
-        if (this.realPart == 0.0 && this.imaginaryPart == 0.0){
+        String formattedRealPart = new DecimalFormat("0.##").format(this.real);
+        String formattedImaginaryPart = new DecimalFormat("0.##").format(this.imaginary);
+        if (this.real == 0.0 && this.imaginary == 0.0){
             return "0";
         }
-        if(this.realPart == 0.0){
+        if(this.real == 0.0){
             return formattedImaginaryPart + "i";
         }
-        if (this.imaginaryPart == 0.0){
+        if (this.imaginary == 0.0){
             return formattedRealPart;
         }
         return formattedRealPart + " + " + formattedImaginaryPart + "i";

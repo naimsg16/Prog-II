@@ -1,0 +1,43 @@
+public class Cypher{
+	private CharPair[] pairs;
+	private int numPairs; //numPairs
+
+public Cypher(int initialSize){
+	this.pairs = new CharPair[initialSize];
+	this.numPairs = 0;
+}
+
+public boolean addPair(char from, char to){
+CharPair pair = new CharPair(from,to);
+	if(inConflict(pair)){
+	return false;
+	}
+	if(this.numPairs==this.pairs.length){
+	resize();
+	
+	}
+this.pairs[this.numPairs] = pair;
+this.numPairs+=1;
+return true;
+}
+
+private boolean inConflict(CharPair pair){
+
+for(int i=0; i < this.numPairs ; i++){
+	if(this.pairs[i].conflictsWith(pair)){
+	return true;
+	}
+}
+	return false;
+
+}
+
+private void resize(){
+
+CharPair [] noupairs = new CharPair[this.pairs.length*2];
+
+for(int i = 0 ; i < this.pairs.length ; i++){
+noupairs[i] = this.pairs[i];
+}
+this.pairs = noupairs;
+}

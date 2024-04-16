@@ -1,0 +1,25 @@
+public class CharPair{
+
+	private char from;
+	private char to;
+
+public CharPair(char from, char to){
+	this.from=from;
+	this.to=to;
+}
+public int encode(char c){
+
+	if(c==this.from){
+		return this.to;
+	}
+	return -1;
+}
+public boolean conflictsWith(CharPair other){
+
+	return other.from==this.from || other.to==this.to;
+		
+}
+
+public CharPair invert(){
+	return new CharPair(this.to,this.from);
+}
