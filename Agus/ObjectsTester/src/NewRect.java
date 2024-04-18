@@ -1,8 +1,9 @@
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
-import java.awt.Color;
 
-public class Rect extends GraphicsProgram {
+import java.awt.*;
+
+public class NewRect extends GraphicsProgram {
     public double TIMEOUT = 20.0;
     public double FIGURE_WIDTH = 150.0;
     public double FIGURE_HEIGHT = 100.0;
@@ -21,17 +22,21 @@ public class Rect extends GraphicsProgram {
         add(rect);
     }
     public void squareMovement(GRect rect){
-        double movement = SPEED;
+        double movement = 1;
         waitForClick();
         while (true) {
             rect.move(movement, movement);
-            if (rect.getX() >= (getWidth() - rect.getWidth())){
-                movement = -SPEED;
-            } else if (rect.getX() <= 0.0) {
+            if (rect.getX() >= (getWidth() - rect.getWidth()) || rect.getY() >= (getHeight() - rect.getHeight())){
+                movement = -(SPEED);
+            } else if (rect.getX() <= 0.0 || rect.getY() <= 0.0) {
                 movement = SPEED;
             }
             pause(TIMEOUT);
+            movement = - SPEED;
         }
     }
+        public static void main(String[] args) {
+            new NewRect().start(args);
+        }
 
 }
