@@ -1,3 +1,5 @@
+package Problema1;
+
 import acm.program.*;
 
 import java.io.*;

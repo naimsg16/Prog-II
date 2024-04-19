@@ -1,3 +1,5 @@
+package Problema1;
+
 public class CharCounter {
 
     private int counter;
