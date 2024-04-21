@@ -9,13 +9,13 @@ public class NumbersSum extends CommandLineProgram {
     private final static String FILE_NAME = "num.txt";
     private int sum;
     private String number;
-    private FileReader nums;
+    private FileReader input;
 
     public void run(){
         try {
-            nums = new FileReader(FILE_NAME);
+            input = new FileReader(FILE_NAME);
             readChars();
-            nums.close();
+            input.close();
             println("The sum is equal to " + sum);
         } catch (IOException ex) {
             println("There has been an error ;(");
@@ -25,10 +25,10 @@ public class NumbersSum extends CommandLineProgram {
 
     private void readChars() throws IOException {
         number = "";
-        int c = nums.read();
+        int c = input.read();
         while(c != -1){
             readChar((char) c);
-            c = nums.read();
+            c = input.read();
         }
         sum += Integer.parseInt(number);
     }
