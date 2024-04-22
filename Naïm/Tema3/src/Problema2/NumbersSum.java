@@ -13,7 +13,8 @@ public class NumbersSum extends CommandLineProgram {
 
     public void run(){
         try {
-            input = new FileReader(FILE_NAME);
+            this.input = new FileReader(FILE_NAME);
+            this.number = "";
             readChars();
             input.close();
             println("The sum is equal to " + sum);
@@ -24,7 +25,6 @@ public class NumbersSum extends CommandLineProgram {
     }
 
     private void readChars() throws IOException {
-        number = "";
         int c = input.read();
         while(c != -1){
             readChar((char) c);
@@ -36,7 +36,7 @@ public class NumbersSum extends CommandLineProgram {
     private void readChar(char c){
         if(Character.isDigit(c)){
             number += (char) c;
-        }else if(!number.isEmpty()){
+        }else if(c == ','){
             sum += Integer.parseInt(number);
             number = "";
         }

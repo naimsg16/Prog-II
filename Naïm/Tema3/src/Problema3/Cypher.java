@@ -1,9 +1,6 @@
 package Problema3;
 import acm.program.CommandLineProgram;
-
 import java.io.*;
-import java.io.IOException;
-
 
 public class Cypher extends CommandLineProgram {
     private static final int LETTERS = 26;
