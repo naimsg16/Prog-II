@@ -52,5 +52,5 @@ public class Cypher2 extends CommandLineProgram {
     }
     public static void main(String[] args){
         new Cypher2().start(args);
-}
+    }
 }

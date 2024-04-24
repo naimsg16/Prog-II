@@ -8,13 +8,11 @@ public class NumbersSum extends CommandLineProgram {
 
     private final static String FILE_NAME = "num.txt";
     private int sum;
-    private String number;
     private FileReader input;
 
     public void run(){
         try {
             this.input = new FileReader(FILE_NAME);
-            this.number = "";
             readChars();
             input.close();
             println("The sum is equal to " + sum);
@@ -25,21 +23,18 @@ public class NumbersSum extends CommandLineProgram {
     }
 
     private void readChars() throws IOException {
+        String number = "";
         int c = input.read();
         while(c != -1){
-            readChar((char) c);
+            if(Character.isDigit(c)){
+                number += (char) c;
+            }else if(c == ','){
+                sum += Integer.parseInt(number);
+                number = "";
+            }
             c = input.read();
         }
         sum += Integer.parseInt(number);
-    }
-
-    private void readChar(char c){
-        if(Character.isDigit(c)){
-            number += (char) c;
-        }else if(c == ','){
-            sum += Integer.parseInt(number);
-            number = "";
-        }
     }
 
     public static void main(String[] args) {

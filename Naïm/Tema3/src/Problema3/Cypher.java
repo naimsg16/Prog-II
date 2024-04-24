@@ -24,7 +24,6 @@ public class Cypher extends CommandLineProgram {
             println("There has been an error ;(");
         }
     }
-
     private int realDistance(int distance){
         int realDistance = distance % LETTERS;
         if(realDistance < 0){
