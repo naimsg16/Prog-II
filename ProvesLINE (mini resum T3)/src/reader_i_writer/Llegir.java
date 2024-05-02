@@ -1,4 +1,4 @@
-package r_w;
+package reader_i_writer;
 
 import acm.program.ConsoleProgram;
 import java.io.*;
