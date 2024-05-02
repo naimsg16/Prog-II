@@ -19,7 +19,7 @@ public class Person {
      * <p>
      * married (boolean) -> 1 bit -> 1 byte
      */
-    private static final int SIZE = 8 + 2 * NAME_LIMIT + 4 + 1;
+    public static final int SIZE = 8 + 2 * NAME_LIMIT + 4 + 1;
 
     /**
      * Person constructor
@@ -73,6 +73,14 @@ public class Person {
         offset += 4;
         boolean married = PackUtils.unpackBoolean(record,offset);
         return new Person(id,name,age,married);
+    }
+
+    /**
+     * Retorna la id
+     * @return la id (XD)
+     */
+    public long getId(){
+        return this.id;
     }
 
 }
