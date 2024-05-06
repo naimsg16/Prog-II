@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"reader_i_writer","c":"Llegir","l":"Llegir()","u":"%3Cinit%3E()"},{"p":"reader_i_writer","c":"Llegir","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"reader_i_writer","c":"Llegir","l":"run()"}];updateSearchResults();
