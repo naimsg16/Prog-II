@@ -1,4 +1,4 @@
-package Examen_22_23.ex1.ex1;
+package Examen_22_23.ex1;
 
 import utils.PackUtils;
 

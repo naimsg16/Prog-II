@@ -1,4 +1,4 @@
-package Examen_22_23.ex1.ex1;
+package Examen_22_23.ex1;
 import acm.program.CommandLineProgram;
 import java.io.*;
 import java.util.StringTokenizer;
@@ -50,6 +50,8 @@ public class ProcessResults extends CommandLineProgram {
         Team team2 = league.readTeam(team2Id);
         team1.addGameResult(goalsTeam1, goalsTeam2);
         team2.addGameResult(goalsTeam2, goalsTeam1);
+        league.writeTeam(team1);
+        league.writeTeam(team2);
     }
 
 

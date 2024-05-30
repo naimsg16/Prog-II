@@ -1,4 +1,4 @@
-package Examen_22_23.ex1.ex2;
+package Examen_22_23.ex2;
 
 import acm.program.CommandLineProgram;
 
