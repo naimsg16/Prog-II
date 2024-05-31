@@ -11,20 +11,17 @@ public class Balanced extends CommandLineProgram {
     }
 
     private boolean balanced(int[] vector, int factor){
-
-        return balanced(vector,factor,0,vector.length - 1);
+        return balanced(vector,factor,0,vector.length);
     }
 
     private boolean balanced(int[] vector, int factor, int begin, int end){
-        if(end - begin == 2){
-            return vector[begin + 1] == factor; //també funciona amb vector[end - 1]
-        } else if (end - begin == 1) {
-            return vector[begin] + vector[end] == factor;
-        }else {
-            return  vector[begin] + vector[end] == factor &&
-                    balanced(vector,factor,begin + 1,end - 1)
-            ;
+        if(begin == end){
+            return true;
+        }else if(begin == end - 1){
+            return vector[begin] == factor;
         }
+
+        return vector[begin] + vector[end - 1] == factor && balanced(vector,factor,begin + 1, end - 1);
     }
 
     public static void main(String[] args) {
