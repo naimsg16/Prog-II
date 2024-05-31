@@ -11,7 +11,7 @@ public class League {
 
     public Team readTeam(long id) throws IOException {
         byte[] record = new byte[Team.SIZE];
-        this.raf.seek( (id * Team.SIZE) - 1L);
+        this.raf.seek( (id - 1L) * Team.SIZE);
         this.raf.read(record);
         return Team.fromBytes(record);
     }
@@ -21,6 +21,7 @@ public class League {
     public void writeTeam(Team team) throws IOException {
         byte[] record = team.toBytes();
         this.raf.seek((team.getId() * Team.SIZE) - 1L);
+        this.raf.write(record);
     }
     public int numTeams() throws IOException {
         return (int) this.raf.length() / Team.SIZE;

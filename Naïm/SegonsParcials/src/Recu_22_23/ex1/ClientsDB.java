@@ -23,14 +23,14 @@ public class ClientsDB {
      */
     public Client read(long id) throws IOException {
         byte[] record = new byte[Client.SIZE];
-        this.raf.seek(id * Client.SIZE - 1L);
+        this.raf.seek((id - 1L) * Client.SIZE );
         this.raf.read(record);
         return Client.fromBytes(record);
     }
 
     public void write(Client client) throws IOException {
         byte[] record = new byte[Client.SIZE];
-        this.raf.seek(client.getId() * Client.SIZE - 1L);
+        this.raf.seek((client.getId() - 1L) * Client.SIZE);
         this.raf.write(record);
     }
     public long numClients() throws IOException {
