@@ -12,7 +12,7 @@ public class Stats {
 
     public Record read(int x, int y) throws IOException {
         byte[] record = new byte[Record.SIZE];
-        long posInFile = (long) x * Record.GRID_SIZE + (long) y * Record.SIZE;
+        long posInFile = ((long)x * Record.GRID_SIZE + y) * Record.SIZE;
         this.raf.seek(posInFile);
         this.raf.read(record);
         return Record.fromBytes(record);
