@@ -16,8 +16,11 @@ public class Decreasing extends CommandLineProgram {
     }
 
     private boolean isDecreasing(int[] vector, int pos){
+        if(pos == 0){
+            return true;
+        }
         if( pos == 1){
-            return vector[pos] <= vector[0];
+            return vector[pos] <= vector[pos - 1] && isDecreasing(vector, 0);
         }
         return vector[pos - 1] <= vector[pos - 2] && isDecreasing(vector,pos-1);
     }
